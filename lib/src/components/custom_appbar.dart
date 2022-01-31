@@ -9,10 +9,12 @@ class CustomAppBar extends AppBar {
     String? title,
     Widget? leading,
     List<Widget>? actions,
+    bool? centerTitle,
     required BuildContext context,
   }) : super(
           key: key,
           title: Text(title ?? ''),
+          centerTitle: centerTitle ?? true,
           leading: leading ??
               Padding(
                 padding: const EdgeInsets.only(left: 24),
