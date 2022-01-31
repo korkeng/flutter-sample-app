@@ -16,8 +16,8 @@ class MenuCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.blueGrey,
-        border: Border.all(color: Colors.orange, width: 5),
+        color: Colors.white,
+        border: Border.all(color: Colors.black),
         borderRadius: const BorderRadius.all(
           Radius.circular(8),
         ),

@@ -34,6 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('Air Conditioning Curcuit'),
         leading: Padding(
           padding: const EdgeInsets.only(left: 24),
@@ -61,30 +62,33 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: [
               MenuCard(
-                image: ImagePath.catTransparent,
+                image: ImagePath.test,
                 text: 'แบบทดสอบก่อนเรียน',
+                colors: Colors.blue.shade400,
               ),
               const SizedBox(height: 24),
               MenuCard(
-                image: ImagePath.cat,
+                image: ImagePath.book,
                 text: 'ใบความรู้',
                 colors: Colors.blue.shade400,
               ),
               const SizedBox(height: 24),
               MenuCard(
-                image: ImagePath.parrot,
+                image: ImagePath.circuit,
                 text: 'การทดลอง',
-                colors: Colors.pink.shade400,
+                colors: Colors.blue.shade400,
               ),
               const SizedBox(height: 24),
               MenuCard(
-                image: ImagePath.cat,
+                image: ImagePath.test,
                 text: 'แบบทดสอบหลังเรียน',
+                colors: Colors.blue.shade400,
               ),
               const SizedBox(height: 24),
               MenuCard(
-                image: ImagePath.parrot,
+                image: ImagePath.smile,
                 text: 'แบบประเมินความพึงพอใจ',
+                colors: Colors.blue.shade400,
               ),
             ],
           ),

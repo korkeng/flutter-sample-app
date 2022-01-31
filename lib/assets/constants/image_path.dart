@@ -1,5 +1,6 @@
 class ImagePath {
-  static const String parrot = 'lib/assets/images/parrot.jpeg';
-  static const String cat = 'lib/assets/images/cat.jpeg';
-  static const String catTransparent = 'lib/assets/images/cat_transparent.png';
+  static const String smile = 'lib/assets/images/smile.png';
+  static const String circuit = 'lib/assets/images/circuit.png';
+  static const String book = 'lib/assets/images/book.png';
+  static const String test = 'lib/assets/images/test.png';
 }
