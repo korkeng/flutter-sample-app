@@ -16,6 +16,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: CustomAppBar(
         title: 'Air Conditioning Circuit',
+        context: context,
       ),
       body: SafeArea(
         child: Padding(

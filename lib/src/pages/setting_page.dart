@@ -14,6 +14,7 @@ class _SettingPageState extends State<SettingPage> {
     return Scaffold(
       appBar: CustomAppBar(
         title: 'Setting',
+        context: context,
       ),
       body: SafeArea(
         minimum: const EdgeInsets.all(16),

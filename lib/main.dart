@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        fontFamily: 'Subject Condensed',
         primarySwatch: Colors.blue,
       ),
       home: const MainPage(),
