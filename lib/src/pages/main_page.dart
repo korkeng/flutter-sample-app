@@ -16,16 +16,6 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: CustomAppBar(
         title: 'Air Conditioning Circuit',
-        context: context,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 24),
-          child: IconButton(
-            iconSize: 36,
-            icon: const Icon(Icons.account_circle_outlined),
-            // ignore: avoid_returning_null_for_void
-            onPressed: () => null,
-          ),
-        ),
       ),
       body: SafeArea(
         child: Padding(

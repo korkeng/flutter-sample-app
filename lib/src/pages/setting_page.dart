@@ -13,8 +13,33 @@ class _SettingPageState extends State<SettingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        context: context,
         title: 'Setting',
+      ),
+      body: SafeArea(
+        minimum: const EdgeInsets.all(16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              color: Colors.red,
+              height: 30,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(
+                  Colors.blue.shade400,
+                ),
+              ),
+              child: Container(
+                alignment: Alignment.center,
+                height: 64,
+                width: double.infinity,
+                child: const Text('Sign Out'),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
