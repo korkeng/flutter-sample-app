@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sample_app/src/components/custom_buttom_sheet.dart';
+import 'package:sample_app/src/widgets/logout_widget.dart';
 
 class CustomAppBar extends AppBar {
   CustomAppBar({
@@ -42,46 +43,7 @@ class CustomAppBar extends AppBar {
                               ),
                             ),
                             const SizedBox(height: 24),
-                            GestureDetector(
-                              onTap: () {},
-                              child: Container(
-                                color: Colors.transparent,
-                                height: 50,
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          width: 40,
-                                          height: 40,
-                                          alignment: Alignment.center,
-                                          decoration: const BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Color(0xFF9ECEFA),
-                                          ),
-                                          child: const Icon(
-                                            Icons.logout_rounded,
-                                            color: Colors.blue,
-                                            size: 28,
-                                          ),
-                                        ),
-                                        const SizedBox(width: 16),
-                                        const Text(
-                                          'Log out',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const Icon(Icons.chevron_right_rounded),
-                                  ],
-                                ),
-                              ),
-                            ),
+                            const LogoutWidget(),
                             const SizedBox(height: 24),
                             Container(
                               height: 50,
