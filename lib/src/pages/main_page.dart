@@ -1,7 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_app/assets/constants/image_path.dart';
+import 'package:sample_app/assets/constants/translation_keys.dart';
 import 'package:sample_app/src/components/custom_appbar.dart';
 import 'package:sample_app/src/components/menu_card.dart';
+import 'package:sample_app/utils/add_import.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -15,7 +18,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: 'Air Conditioning Circuit',
+        title: tr(TranslationKey.mainPage),
         context: context,
       ),
       body: SafeArea(
@@ -23,6 +26,16 @@ class _MainPageState extends State<MainPage> {
           padding: const EdgeInsets.all(24),
           child: Column(
             children: [
+              TextButton(
+                onPressed: () async {
+                  await context.setLocale(
+                    context.locale.toString() == 'en'
+                        ? const Locale('th')
+                        : const Locale('en'),
+                  );
+                },
+                child: const Text('change language'),
+              ),
               MenuCard(
                 image: ImagePath.test,
                 text: 'แบบทดสอบก่อนเรียน',

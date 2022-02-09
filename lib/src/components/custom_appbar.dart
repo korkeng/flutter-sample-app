@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:sample_app/assets/constants/translation_keys.dart';
 import 'package:sample_app/src/components/custom_buttom_sheet.dart';
 import 'package:sample_app/src/widgets/logout_widget.dart';
 
@@ -35,9 +37,9 @@ class CustomAppBar extends AppBar {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'Setting',
-                              style: TextStyle(
+                            Text(
+                              tr(TranslationKey.settingPage),
+                              style: const TextStyle(
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,
                               ),
