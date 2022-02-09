@@ -22,50 +22,52 @@ class _MainPageState extends State<MainPage> {
         context: context,
       ),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            children: [
-              TextButton(
-                onPressed: () async {
-                  await context.setLocale(
-                    context.locale.toString() == 'en'
-                        ? const Locale('th')
-                        : const Locale('en'),
-                  );
-                },
-                child: const Text('change language'),
-              ),
-              MenuCard(
-                image: ImagePath.test,
-                text: 'แบบทดสอบก่อนเรียน',
-                colors: Colors.blue.shade400,
-              ),
-              const SizedBox(height: 24),
-              MenuCard(
-                image: ImagePath.book,
-                text: 'ใบความรู้',
-                colors: Colors.blue.shade400,
-              ),
-              const SizedBox(height: 24),
-              MenuCard(
-                image: ImagePath.circuit,
-                text: 'การทดลอง',
-                colors: Colors.blue.shade400,
-              ),
-              const SizedBox(height: 24),
-              MenuCard(
-                image: ImagePath.test,
-                text: 'แบบทดสอบหลังเรียน',
-                colors: Colors.blue.shade400,
-              ),
-              const SizedBox(height: 24),
-              MenuCard(
-                image: ImagePath.smile,
-                text: 'แบบประเมินความพึงพอใจ',
-                colors: Colors.blue.shade400,
-              ),
-            ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              children: [
+                TextButton(
+                  onPressed: () async {
+                    await context.setLocale(
+                      context.locale.toString() == 'en'
+                          ? const Locale('th')
+                          : const Locale('en'),
+                    );
+                  },
+                  child: const Text('change language'),
+                ),
+                MenuCard(
+                  image: ImagePath.test,
+                  text: 'แบบทดสอบก่อนเรียน',
+                  colors: Colors.blue.shade400,
+                ),
+                const SizedBox(height: 24),
+                MenuCard(
+                  image: ImagePath.book,
+                  text: 'ใบความรู้',
+                  colors: Colors.blue.shade400,
+                ),
+                const SizedBox(height: 24),
+                MenuCard(
+                  image: ImagePath.circuit,
+                  text: 'การทดลอง',
+                  colors: Colors.blue.shade400,
+                ),
+                const SizedBox(height: 24),
+                MenuCard(
+                  image: ImagePath.test,
+                  text: 'แบบทดสอบหลังเรียน',
+                  colors: Colors.blue.shade400,
+                ),
+                const SizedBox(height: 24),
+                MenuCard(
+                  image: ImagePath.smile,
+                  text: 'แบบประเมินความพึงพอใจ',
+                  colors: Colors.blue.shade400,
+                ),
+              ],
+            ),
           ),
         ),
       ),
