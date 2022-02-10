@@ -7,4 +7,5 @@ class TranslationKey {
   static const String posttest = 'main_page.post_test_tile';
   static const String satisfactionsurvey = 'main_page.satisfaction_survey_tile';
   static const String changelanguage = 'setting_page.change_language_tile';
+  static const String logout = 'setting_page.logout_tile';
 }

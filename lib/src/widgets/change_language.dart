@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:sample_app/assets/constants/translation_keys.dart';
 import 'package:sample_app/utils/add_import.dart';
 
 class Changelanguage extends StatelessWidget {
-  const Changelanguage({Key? key}) : super(key: key);
+  Changelanguage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +39,9 @@ class Changelanguage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 16),
-                const Text(
-                  'Change language',
-                  style: TextStyle(
+                Text(
+                  tr(TranslationKey.changelanguage),
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                   ),

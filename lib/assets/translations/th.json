@@ -10,6 +10,7 @@
 
     "setting_page" : {
         "title": "ตั้งค่า",
-        "change_language": "เปลี่ยนภาษา"
+        "change_language_tile": "เปลี่ยนภาษา",
+        "logout_tile": "ออกจากระบบ"
     }
 }

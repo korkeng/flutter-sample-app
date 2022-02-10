@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:sample_app/assets/constants/translation_keys.dart';
 
 class LogoutWidget extends StatelessWidget {
-  const LogoutWidget({Key? key}) : super(key: key);
+  LogoutWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +32,9 @@ class LogoutWidget extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 16),
-                const Text(
-                  'Log out',
-                  style: TextStyle(
+                Text(
+                  tr(TranslationKey.logout),
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                   ),

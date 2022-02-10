@@ -46,9 +46,9 @@ class CustomAppBar extends AppBar {
                               ),
                             ),
                             const SizedBox(height: 24),
-                            const LogoutWidget(),
+                            LogoutWidget(),
                             const SizedBox(height: 24),
-                            const Changelanguage(),
+                            Changelanguage(),
                           ],
                         ),
                       );

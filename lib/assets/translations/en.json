@@ -10,6 +10,7 @@
 
     "setting_page" : {
         "title": "Setting",
-        "change_language_tile": "Change language"
+        "change_language_tile": "Change language",
+        "logout_tile": "Log out"
     }
 }
