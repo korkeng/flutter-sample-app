@@ -1,10 +1,15 @@
 {
-    "setting_page": "ตั้งค่า",
-    "main_page": "วงจรเครื่องปรับอากาศ",
-    "pre_test": "แบบทดสอบก่อนเรียน",
-    "work_sheet": "ใบความรู้",
-    "laboratory": "การทดลอง",
-    "post_test": "แบบทดสอบหลังเรียน",
-    "satisfactionsurvey": "แบบประเมินความพึงพอใจ",
-    "change_language": "เปลี่ยนภาษา"
+    "main_page": {
+        "title": "วงจรเครื่องปรับอากาศ",
+        "pre_test_tile": "แบบทดสอบก่อนเรียน",
+        "work_sheet_tile": "ใบความรู้",
+        "laboratory_tile": "การทดลอง",
+        "post_test_tile": "แบบทดสอบหลังเรียน",
+        "satisfaction_survey_tile": "แบบประเมินความพึงพอใจ"
+    },
+
+    "setting_page" : {
+        "title": "ตั้งค่า",
+        "change_language": "เปลี่ยนภาษา"
+    }
 }

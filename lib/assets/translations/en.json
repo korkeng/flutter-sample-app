@@ -1,10 +1,15 @@
 {
-    "setting_page": "Setting",
-    "main_page": "Air Conditioning Circuit",
-    "pre_test": "Pre-test",
-    "work_sheet": "Worksheet",
-    "laboratory": "Laboratory",
-    "post_test": "Post-test",
-    "satisfactionsurvey": "Satisfaction survey",
-    "change_language": "Change language"
+    "main_page": {
+        "title": "Air Conditioning Circuit",
+        "pre_test_tile": "Pre-test",
+        "work_sheet_tile": "Worksheet",
+        "laboratory_tile": "Laboratory",
+        "post_test_tile": "Post-test",
+        "satisfaction_survey_tile": "Satisfaction survey"
+    },
+
+    "setting_page" : {
+        "title": "Setting",
+        "change_language_tile": "Change language"
+    }
 }

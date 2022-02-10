@@ -39,7 +39,7 @@ class CustomAppBar extends AppBar {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              tr(TranslationKey.settingPage),
+                              tr(TranslationKey.settingPageTitle),
                               style: const TextStyle(
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,

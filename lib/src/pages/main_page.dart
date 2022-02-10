@@ -4,7 +4,6 @@ import 'package:sample_app/assets/constants/image_path.dart';
 import 'package:sample_app/assets/constants/translation_keys.dart';
 import 'package:sample_app/src/components/custom_appbar.dart';
 import 'package:sample_app/src/components/menu_card.dart';
-import 'package:sample_app/utils/add_import.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -18,7 +17,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: tr(TranslationKey.mainPage),
+        title: tr(TranslationKey.mainPageTitle),
         context: context,
       ),
       body: SafeArea(
