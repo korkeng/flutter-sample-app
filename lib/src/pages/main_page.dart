@@ -27,43 +27,33 @@ class _MainPageState extends State<MainPage> {
             padding: const EdgeInsets.all(24),
             child: Column(
               children: [
-                TextButton(
-                  onPressed: () async {
-                    await context.setLocale(
-                      context.locale.toString() == 'en'
-                          ? const Locale('th')
-                          : const Locale('en'),
-                    );
-                  },
-                  child: const Text('change language'),
-                ),
                 MenuCard(
                   image: ImagePath.test,
-                  text: 'แบบทดสอบก่อนเรียน',
+                  text: tr(TranslationKey.pretest),
                   colors: Colors.blue.shade400,
                 ),
                 const SizedBox(height: 24),
                 MenuCard(
                   image: ImagePath.book,
-                  text: 'ใบความรู้',
+                  text: tr(TranslationKey.worksheet),
                   colors: Colors.blue.shade400,
                 ),
                 const SizedBox(height: 24),
                 MenuCard(
                   image: ImagePath.circuit,
-                  text: 'การทดลอง',
+                  text: tr(TranslationKey.laboratory),
                   colors: Colors.blue.shade400,
                 ),
                 const SizedBox(height: 24),
                 MenuCard(
                   image: ImagePath.test,
-                  text: 'แบบทดสอบหลังเรียน',
+                  text: tr(TranslationKey.posttest),
                   colors: Colors.blue.shade400,
                 ),
                 const SizedBox(height: 24),
                 MenuCard(
                   image: ImagePath.smile,
-                  text: 'แบบประเมินความพึงพอใจ',
+                  text: tr(TranslationKey.satisfactionsurvey),
                   colors: Colors.blue.shade400,
                 ),
               ],

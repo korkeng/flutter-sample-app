@@ -1,4 +1,10 @@
 {
     "setting_page": "ตั้งค่า",
-    "main_page": "วงจรเครื่องปรับอากาศ"
+    "main_page": "วงจรเครื่องปรับอากาศ",
+    "pre_test": "แบบทดสอบก่อนเรียน",
+    "work_sheet": "ใบความรู้",
+    "laboratory": "การทดลอง",
+    "post_test": "แบบทดสอบหลังเรียน",
+    "satisfactionsurvey": "แบบประเมินความพึงพอใจ",
+    "change_language": "เปลี่ยนภาษา"
 }

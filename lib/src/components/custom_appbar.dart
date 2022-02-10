@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_app/assets/constants/translation_keys.dart';
 import 'package:sample_app/src/components/custom_buttom_sheet.dart';
+import 'package:sample_app/src/widgets/change_language.dart';
 import 'package:sample_app/src/widgets/logout_widget.dart';
 
 class CustomAppBar extends AppBar {
@@ -47,10 +48,7 @@ class CustomAppBar extends AppBar {
                             const SizedBox(height: 24),
                             const LogoutWidget(),
                             const SizedBox(height: 24),
-                            Container(
-                              height: 50,
-                              color: Colors.black38,
-                            ),
+                            const Changelanguage(),
                           ],
                         ),
                       );

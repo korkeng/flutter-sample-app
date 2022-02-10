@@ -1,4 +1,10 @@
 {
     "setting_page": "Setting",
-    "main_page": "Air Conditioning Circuit"
+    "main_page": "Air Conditioning Circuit",
+    "pre_test": "Pre-test",
+    "work_sheet": "Worksheet",
+    "laboratory": "Laboratory",
+    "post_test": "Post-test",
+    "satisfactionsurvey": "Satisfaction survey",
+    "change_language": "Change language"
 }
