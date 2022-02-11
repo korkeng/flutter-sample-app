@@ -8,4 +8,5 @@ class TranslationKey {
   static const String satisfactionsurvey = 'main_page.satisfaction_survey_tile';
   static const String changelanguage = 'setting_page.change_language_tile';
   static const String logout = 'setting_page.logout_tile';
+  static const String preTestTitle = 'pre_test_page.title';
 }
