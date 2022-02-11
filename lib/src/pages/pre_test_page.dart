@@ -14,13 +14,15 @@ class PreTestPage extends StatefulWidget {
 class _PreTestPageState extends State<PreTestPage> {
   int _currentTask = 1;
   final List<int> _currentAnswer = [];
-  final int _maxTask = 20;
+  int? _maxTask;
+
   final List<QuestionModel> questionList = Question.getQuestionList;
 
   @override
   void initState() {
     super.initState();
     _setDefaultDataToList();
+    _maxTask = questionList.length;
   }
 
   void _setDefaultDataToList() {
@@ -157,7 +159,7 @@ class _PreTestPageState extends State<PreTestPage> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      if (_currentTask >= 20) {
+                      if (_currentTask >= _maxTask!) {
                         print('Complete test');
                         // TODO: Navigate to Test - Result screen
                         return;
@@ -176,7 +178,8 @@ class _PreTestPageState extends State<PreTestPage> {
                       ),
                       fixedSize: MaterialStateProperty.all(const Size(132, 56)),
                     ),
-                    child: Text(_currentTask >= 20 ? 'ส่งคำตอบ' : 'ข้อถัดไป'),
+                    child: Text(
+                        _currentTask >= _maxTask! ? 'ส่งคำตอบ' : 'ข้อถัดไป'),
                   ),
                 ],
               ),
