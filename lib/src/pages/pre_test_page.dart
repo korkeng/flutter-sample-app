@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sample_app/assets/constants/translation_keys.dart';
 import 'package:sample_app/assets/questions/questions.dart';
 import 'package:sample_app/src/components/custom_appbar.dart';
+import 'package:sample_app/src/pages/test_result_page.dart';
 
 class PreTestPage extends StatefulWidget {
   PreTestPage({Key? key}) : super(key: key);
@@ -160,8 +161,11 @@ class _PreTestPageState extends State<PreTestPage> {
                   ElevatedButton(
                     onPressed: () {
                       if (_currentTask >= _maxTask!) {
-                        print('Complete test');
-                        // TODO: Navigate to Test - Result screen
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (context) => TestResultPage(),
+                          ),
+                        );
                         return;
                       }
                       setState(() {
