@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Subject Condensed',
         primarySwatch: Colors.blue,
       ),
-      home: const MainPage(),
+      home: MainPage(),
     );
   }
 }

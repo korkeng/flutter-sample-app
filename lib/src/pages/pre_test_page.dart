@@ -28,7 +28,7 @@ class _PreTestPageState extends State<PreTestPage> {
 
   void _setDefaultDataToList() {
     for (int _i = 0; _i < questionList.length; _i++) {
-      _currentAnswer.add(99);
+      _currentAnswer.add(-1);
     }
   }
 
@@ -161,10 +161,14 @@ class _PreTestPageState extends State<PreTestPage> {
                   ElevatedButton(
                     onPressed: () {
                       if (_currentTask >= _maxTask!) {
-                        Navigator.of(context).pushReplacement(
+                        Navigator.of(context).pushAndRemoveUntil(
                           MaterialPageRoute(
-                            builder: (context) => TestResultPage(),
+                            builder: (context) => TestResultPage(
+                              answerList: _currentAnswer,
+                              questionList: questionList,
+                            ),
                           ),
+                          (Route<dynamic> route) => false,
                         );
                         return;
                       }

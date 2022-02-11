@@ -2,11 +2,13 @@ class QuestionModel {
   late final int? no;
   late final String? question;
   late final List<String>? choise;
+  late final int? correctAnswer;
 
   QuestionModel({
     this.no,
     this.question,
     this.choise,
+    this.correctAnswer,
   });
 }
 
@@ -16,6 +18,7 @@ class Question {
       no: 1,
       question: '1 + 1 = ?',
       choise: ['1', '2', '3', '4'],
+      correctAnswer: 2,
     ),
     QuestionModel(
       no: 2,
@@ -26,11 +29,13 @@ class Question {
         'ตัวอย่างตัวเลือก 3 ตัวอย่างตัวเลือก 3 ตัวอย่างตัวเลือก 3',
         'ตัวอย่างตัวเลือก 4 ตัวอย่างตัวเลือก 4 ตัวอย่างตัวเลือก 4 ตัวอย่างตัวเลือก 4',
       ],
+      correctAnswer: 3,
     ),
     QuestionModel(
       no: 3,
       question: '3 + 4 = ?',
       choise: ['5', '6', '7', '8'],
+      correctAnswer: 3,
     ),
   ];
 }

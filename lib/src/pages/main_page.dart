@@ -11,7 +11,7 @@ import 'package:sample_app/src/pages/survey_page.dart';
 import 'package:sample_app/src/pages/worksheet_page.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+  MainPage({Key? key}) : super(key: key);
 
   @override
   _MainPageState createState() => _MainPageState();
