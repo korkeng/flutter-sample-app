@@ -7,10 +7,12 @@
         "post_test_tile": "แบบทดสอบหลังเรียน",
         "satisfaction_survey_tile": "แบบประเมินความพึงพอใจ"
     },
-
     "setting_page" : {
         "title": "ตั้งค่า",
         "change_language_tile": "เปลี่ยนภาษา",
         "logout_tile": "ออกจากระบบ"
+    },
+    "pre_test_page" : {
+        "title": "แบบทดสอบก่อนเรียน"
     }
 }

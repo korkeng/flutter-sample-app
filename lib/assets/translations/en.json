@@ -7,10 +7,12 @@
         "post_test_tile": "Post-test",
         "satisfaction_survey_tile": "Satisfaction survey"
     },
-
     "setting_page" : {
         "title": "Setting",
         "change_language_tile": "Change language",
         "logout_tile": "Log out"
+    },
+    "pre_test_page" : {
+        "title": "Pre-Test"
     }
 }
