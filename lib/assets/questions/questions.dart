@@ -15,12 +15,7 @@ class Question {
     QuestionModel(
       no: 1,
       question: '1 + 1 = ?',
-      choise: [
-        '1',
-        '2',
-        '3',
-        '4',
-      ],
+      choise: ['1', '2', '3', '4'],
     ),
     QuestionModel(
       no: 2,
@@ -35,12 +30,7 @@ class Question {
     QuestionModel(
       no: 3,
       question: '3 + 4 = ?',
-      choise: [
-        '5',
-        '6',
-        '7',
-        '8',
-      ],
+      choise: ['5', '6', '7', '8'],
     ),
   ];
 }
