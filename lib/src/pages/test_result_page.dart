@@ -83,6 +83,12 @@ class _TestResultPageState extends State<TestResultPage> {
               ),
             ),
             TextButton(
+              style: TextButton.styleFrom(
+                padding: const EdgeInsets.all(16.0),
+                primary: Colors.black,
+                textStyle: const TextStyle(fontSize: 20),
+                
+              ),
               onPressed: () {
                 Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) => MainPage()));
