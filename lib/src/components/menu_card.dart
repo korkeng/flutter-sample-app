@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MenuCard extends StatelessWidget {
-  late String text;
-  late String image;
-  late Color? colors;
-  late Widget screenName;
+  final String text;
+  final String image;
+  final Color? colors;
+  final Widget screenName;
 
   MenuCard({
     Key? key,

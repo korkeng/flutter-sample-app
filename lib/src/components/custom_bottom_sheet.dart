@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CustomButtomSheet extends StatelessWidget {
+class CustomBottomSheet extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry? padding;
 
-  const CustomButtomSheet({
+  const CustomBottomSheet({
     Key? key,
     this.padding,
     required this.child,

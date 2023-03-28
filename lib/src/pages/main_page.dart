@@ -54,14 +54,14 @@ class _MainPageState extends State<MainPage> {
                 const SizedBox(height: 24),
                 MenuCard(
                   image: ImagePath.test,
-                  text: tr(TranslationKey.posttest),
+                  text: tr(TranslationKey.postTest),
                   colors: Colors.blue.shade400,
                   screenName: PostTestPage(),
                 ),
                 const SizedBox(height: 24),
                 MenuCard(
                   image: ImagePath.smile,
-                  text: tr(TranslationKey.satisfactionsurvey),
+                  text: tr(TranslationKey.satisfactionSurvey),
                   colors: Colors.blue.shade400,
                   screenName: SurveyPage(),
                 ),

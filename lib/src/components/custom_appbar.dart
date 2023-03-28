@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_app/assets/constants/translation_keys.dart';
-import 'package:sample_app/src/components/custom_buttom_sheet.dart';
+import 'package:sample_app/src/components/custom_bottom_sheet.dart';
 import 'package:sample_app/src/widgets/change_language.dart';
 import 'package:sample_app/src/widgets/logout_widget.dart';
 
@@ -33,7 +33,7 @@ class CustomAppBar extends AppBar {
                     context: context,
                     backgroundColor: Colors.transparent,
                     builder: (BuildContext context) {
-                      return CustomButtomSheet(
+                      return CustomBottomSheet(
                         padding: const EdgeInsets.all(16),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +48,7 @@ class CustomAppBar extends AppBar {
                             const SizedBox(height: 24),
                             LogoutWidget(),
                             const SizedBox(height: 24),
-                            Changelanguage(),
+                            ChangeLanguage(),
                           ],
                         ),
                       );

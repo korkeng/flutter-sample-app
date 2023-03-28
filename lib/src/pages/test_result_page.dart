@@ -5,8 +5,8 @@ import 'package:sample_app/src/components/custom_appbar.dart';
 import 'package:sample_app/src/pages/main_page.dart';
 
 class TestResultPage extends StatefulWidget {
-  List<int> answerList;
-  List<QuestionModel> questionList;
+  final List<int> answerList;
+  final List<QuestionModel> questionList;
 
   TestResultPage({
     Key? key,
@@ -84,7 +84,8 @@ class _TestResultPageState extends State<TestResultPage> {
             ),
             TextButton(
               onPressed: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => MainPage()));
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => MainPage()));
               },
               child: Text('Back to Main Page'),
             )

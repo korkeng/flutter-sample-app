@@ -1,19 +1,16 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_app/assets/constants/translation_keys.dart';
-import 'package:sample_app/utils/add_import.dart';
 
-class Changelanguage extends StatelessWidget {
-  Changelanguage({Key? key}) : super(key: key);
+class ChangeLanguage extends StatelessWidget {
+  ChangeLanguage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
         await context.setLocale(
-          context.locale.toString() == 'en'
-              ? const Locale('th')
-              : const Locale('en'),
+          context.locale.toString() == Language.EN ? const Locale(Language.TH) : const Locale(Language.EN),
         );
       },
       child: Container(
@@ -40,7 +37,7 @@ class Changelanguage extends StatelessWidget {
                 ),
                 const SizedBox(width: 16),
                 Text(
-                  tr(TranslationKey.changelanguage),
+                  tr(TranslationKey.changeLanguage),
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
