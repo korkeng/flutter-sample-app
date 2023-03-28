@@ -47,6 +47,7 @@
 		<string>th</string>
 	</array>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<key>io.flutter.embedded_views_preview</key>
 	<true/>
 </dict>
 </plist>

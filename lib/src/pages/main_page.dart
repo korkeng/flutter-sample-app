@@ -1,3 +1,6 @@
+import 'dart:io';
+import 'dart:async';
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_app/assets/constants/image_path.dart';
@@ -9,6 +12,8 @@ import 'package:sample_app/src/pages/post_test_page.dart';
 import 'package:sample_app/src/pages/pre_test_page.dart';
 import 'package:sample_app/src/pages/survey_page.dart';
 import 'package:sample_app/src/pages/worksheet_page.dart';
+import 'package:flutter/services.dart';
+import 'package:path_provider/path_provider.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({Key? key}) : super(key: key);
@@ -18,6 +23,37 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  String pathPDF = '';
+
+  @override
+  void initState() {
+    super.initState();
+    // _permissionHandler();
+    fromAsset('lib/assets/files/worksheet.pdf', 'worksheet.pdf').then((f) {
+      setState(() {
+        // print('======== ${f.path}');
+        pathPDF = f.path;
+        // pathPDF = 'lib/assets/files/worksheet.pdf';
+      });
+    });
+  }
+
+  Future<File> fromAsset(String asset, String filename) async {
+    Completer<File> completer = Completer();
+    try {
+      var dir = await getApplicationDocumentsDirectory();
+      File file = File("${dir.path}/$filename");
+      var data = await rootBundle.load(asset);
+      var bytes = data.buffer.asUint8List();
+      await file.writeAsBytes(bytes, flush: true);
+      completer.complete(file);
+    } catch (e) {
+      throw Exception('Error parsing asset pdf file!');
+    }
+
+    return completer.future;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +78,7 @@ class _MainPageState extends State<MainPage> {
                   image: ImagePath.book,
                   text: tr(TranslationKey.worksheet),
                   colors: Colors.blue.shade400,
-                  screenName: WorksheetPage(),
+                  screenName: WorksheetPage(path: pathPDF),
                 ),
                 const SizedBox(height: 24),
                 MenuCard(
