@@ -44,7 +44,7 @@ class _TestResultPageState extends State<TestResultPage> {
     if (totalScore >= 3) {
       path = ImagePath.smile;
     } else if (totalScore >= 2) {
-      path = 'nuetral';
+      path = 'neutral';
     } else {
       path = 'unhappy';
     }
@@ -67,6 +67,7 @@ class _TestResultPageState extends State<TestResultPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _renderReactionImage(),
+            SizedBox(height: 48),
             const Text(
               'คะแนนของคุณ',
               style: TextStyle(
@@ -82,19 +83,30 @@ class _TestResultPageState extends State<TestResultPage> {
                 fontFamily: 'Subject Condensed',
               ),
             ),
-            TextButton(
-              style: TextButton.styleFrom(
-                padding: const EdgeInsets.all(16.0),
-                primary: Colors.black,
-                textStyle: const TextStyle(fontSize: 20),
-                
-              ),
+            SizedBox(height: 24),
+            ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => MainPage()));
+                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => MainPage()));
               },
-              child: Text('Back to Main Page'),
-            )
+              style: ButtonStyle(
+                textStyle: MaterialStateProperty.all(
+                  const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Subject Condensed',
+                  ),
+                ),
+                fixedSize: MaterialStateProperty.all(const Size(256, 56)),
+              ),
+              child: Text(
+                'กลับสู่หน้าหลัก',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Subject Condensed',
+                ),
+              ),
+            ),
           ],
         ),
       ),

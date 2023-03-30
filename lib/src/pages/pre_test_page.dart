@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sample_app/assets/constants/translation_keys.dart';
 import 'package:sample_app/assets/questions/questions.dart';
 import 'package:sample_app/src/components/custom_appbar.dart';
+import 'package:sample_app/src/components/popup_dialog.dart';
 import 'package:sample_app/src/pages/test_result_page.dart';
 
 class PreTestPage extends StatefulWidget {
@@ -32,14 +33,16 @@ class _PreTestPageState extends State<PreTestPage> {
     }
   }
 
-  Widget? _renderChoiseList() {
+  Widget? _renderChoiceList() {
     return ListView.builder(
+      key: Key('lv_of_$_currentTask'),
       shrinkWrap: true,
-      itemCount: questionList[_currentTask - 1].choise!.length,
+      physics: NeverScrollableScrollPhysics(),
+      itemCount: questionList[_currentTask - 1].choice!.length,
       itemBuilder: (context, index) {
         return ListTile(
           title: Text(
-            questionList[_currentTask - 1].choise![index],
+            questionList[_currentTask - 1].choice![index],
             style: const TextStyle(
               fontSize: 20,
               fontFamily: 'Subject Condensed',
@@ -97,34 +100,37 @@ class _PreTestPageState extends State<PreTestPage> {
                   horizontal: 8,
                 ),
                 padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text.rich(
-                      TextSpan(children: [
-                        const TextSpan(
-                          text: 'คำถาม : ',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Subject Condensed',
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 4),
+                      Text.rich(
+                        TextSpan(children: [
+                          const TextSpan(
+                            text: 'คำถาม : ',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Subject Condensed',
+                            ),
                           ),
-                        ),
-                        TextSpan(
-                          text: questionList[_currentTask - 1].question ?? '',
-                          style: const TextStyle(
-                            fontSize: 20,
-                            fontFamily: 'Subject Condensed',
+                          TextSpan(
+                            text: questionList[_currentTask - 1].question ?? '',
+                            style: const TextStyle(
+                              fontSize: 20,
+                              fontFamily: 'Subject Condensed',
+                            ),
                           ),
-                        ),
-                      ]),
-                    ),
-                    const Divider(
-                      color: Colors.blueAccent,
-                      thickness: 1.5,
-                    ),
-                    _renderChoiseList() ?? Container(),
-                  ],
+                        ]),
+                      ),
+                      const Divider(
+                        color: Colors.blueAccent,
+                        thickness: 1.5,
+                      ),
+                      _renderChoiceList() ?? Container(),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -152,29 +158,37 @@ class _PreTestPageState extends State<PreTestPage> {
                         ),
                       ),
                       fixedSize: MaterialStateProperty.all(const Size(132, 56)),
-                      backgroundColor: _currentTask <= 1
-                          ? MaterialStateProperty.all(Colors.grey)
-                          : null,
+                      backgroundColor: _currentTask <= 1 ? MaterialStateProperty.all(Colors.grey) : null,
                     ),
                     child: const Text('ข้อก่อนหน้า'),
                   ),
                   ElevatedButton(
                     onPressed: () {
                       if (_currentTask >= _maxTask!) {
-                        Navigator.of(context).pushAndRemoveUntil(
-                          MaterialPageRoute(
-                            builder: (context) => TestResultPage(
-                              answerList: _currentAnswer,
-                              questionList: questionList,
+                        if (_currentAnswer.contains(-1)) {
+                          showDialog(
+                            barrierDismissible: false,
+                            context: context,
+                            builder: (BuildContext context) {
+                              return PopupDialog();
+                            },
+                          );
+                        } else {
+                          Navigator.of(context).pushAndRemoveUntil(
+                            MaterialPageRoute(
+                              builder: (context) => TestResultPage(
+                                answerList: _currentAnswer,
+                                questionList: questionList,
+                              ),
                             ),
-                          ),
-                          (Route<dynamic> route) => false,
-                        );
-                        return;
+                            (Route<dynamic> route) => false,
+                          );
+                        }
+                      } else {
+                        setState(() {
+                          _currentTask++;
+                        });
                       }
-                      setState(() {
-                        _currentTask++;
-                      });
                     },
                     style: ButtonStyle(
                       textStyle: MaterialStateProperty.all(
@@ -186,8 +200,7 @@ class _PreTestPageState extends State<PreTestPage> {
                       ),
                       fixedSize: MaterialStateProperty.all(const Size(132, 56)),
                     ),
-                    child: Text(
-                        _currentTask >= _maxTask! ? 'ส่งคำตอบ' : 'ข้อถัดไป'),
+                    child: Text(_currentTask >= _maxTask! ? 'ส่งคำตอบ' : 'ข้อถัดไป'),
                   ),
                 ],
               ),

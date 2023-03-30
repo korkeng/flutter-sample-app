@@ -9,6 +9,7 @@ class TranslationKey {
   static const String changeLanguage = 'setting_page.change_language_tile';
   static const String logout = 'setting_page.logout_tile';
   static const String preTestTitle = 'pre_test_page.title';
+  static const String postTestTitle = 'post_test_page.title';
 }
 
 class Language {

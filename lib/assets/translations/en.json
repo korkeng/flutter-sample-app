@@ -1,18 +1,21 @@
 {
-    "main_page": {
-        "title": "Air Conditioning Circuit",
-        "pre_test_tile": "Pre-test",
-        "work_sheet_tile": "Worksheet",
-        "laboratory_tile": "Laboratory",
-        "post_test_tile": "Post-test",
-        "satisfaction_survey_tile": "Satisfaction survey"
-    },
-    "setting_page" : {
-        "title": "Setting",
-        "change_language_tile": "Change language",
-        "logout_tile": "Log out"
-    },
-    "pre_test_page" : {
-        "title": "Pre-Test"
-    }
+  "main_page": {
+    "title": "Air Conditioning Circuit",
+    "pre_test_tile": "Pre-test",
+    "work_sheet_tile": "Worksheet",
+    "laboratory_tile": "Laboratory",
+    "post_test_tile": "Post-test",
+    "satisfaction_survey_tile": "Satisfaction survey"
+  },
+  "setting_page": {
+    "title": "Setting",
+    "change_language_tile": "Change language",
+    "logout_tile": "Log out"
+  },
+  "pre_test_page": {
+    "title": "Pre-Test"
+  },
+  "post_test_page": {
+    "title": "Post-Test"
+  }
 }
