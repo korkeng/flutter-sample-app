@@ -8,9 +8,8 @@ import 'package:sample_app/assets/constants/translation_keys.dart';
 import 'package:sample_app/src/components/custom_appbar.dart';
 import 'package:sample_app/src/components/menu_card.dart';
 import 'package:sample_app/src/pages/laboratory_page.dart';
-import 'package:sample_app/src/pages/post_test_page.dart';
-import 'package:sample_app/src/pages/pre_test_page.dart';
 import 'package:sample_app/src/pages/survey_page.dart';
+import 'package:sample_app/src/pages/test_form_page.dart';
 import 'package:sample_app/src/pages/worksheet_page.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
@@ -71,7 +70,7 @@ class _MainPageState extends State<MainPage> {
                   image: ImagePath.test,
                   text: tr(TranslationKey.pretest),
                   colors: Colors.blue.shade400,
-                  screenName: PreTestPage(),
+                  screenName: TestFormPage(title: tr(TranslationKey.preTestTitle)),
                 ),
                 const SizedBox(height: 24),
                 MenuCard(
@@ -92,7 +91,7 @@ class _MainPageState extends State<MainPage> {
                   image: ImagePath.test,
                   text: tr(TranslationKey.postTest),
                   colors: Colors.blue.shade400,
-                  screenName: PostTestPage(),
+                  screenName: TestFormPage(title: tr(TranslationKey.postTestTitle)),
                 ),
                 const SizedBox(height: 24),
                 MenuCard(

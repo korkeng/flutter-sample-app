@@ -1,19 +1,18 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:sample_app/assets/constants/translation_keys.dart';
 import 'package:sample_app/assets/questions/questions.dart';
 import 'package:sample_app/src/components/custom_appbar.dart';
 import 'package:sample_app/src/components/popup_dialog.dart';
 import 'package:sample_app/src/pages/test_result_page.dart';
 
-class PostTestPage extends StatefulWidget {
-  PostTestPage({Key? key}) : super(key: key);
+class TestFormPage extends StatefulWidget {
+  String title;
+  TestFormPage({Key? key, required this.title}) : super(key: key);
 
   @override
-  _PostTestPageState createState() => _PostTestPageState();
+  _TestFormPageState createState() => _TestFormPageState();
 }
 
-class _PostTestPageState extends State<PostTestPage> {
+class _TestFormPageState extends State<TestFormPage> {
   int _currentTask = 1;
   final List<int> _currentAnswer = [];
   int? _maxTask;
@@ -69,7 +68,7 @@ class _PostTestPageState extends State<PostTestPage> {
     return Scaffold(
       appBar: CustomAppBar(
         context: context,
-        title: tr(TranslationKey.postTestTitle),
+        title: widget.title,
       ),
       body: Padding(
         padding: const EdgeInsets.all(24),

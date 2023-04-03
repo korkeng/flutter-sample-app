@@ -48,6 +48,7 @@ class _TestResultPageState extends State<TestResultPage> {
     } else {
       path = 'unhappy';
     }
+
     return Image.asset(
       path,
       width: 200,
