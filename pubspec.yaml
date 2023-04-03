@@ -43,6 +43,3 @@ flutter:
         - asset: fonts/subject_condensed.ttf
         - asset: fonts/subject_condensed_bold.ttf
           weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
