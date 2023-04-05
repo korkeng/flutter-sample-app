@@ -22,7 +22,6 @@ dependencies:
   easy_localization: ^3.0.0
   flutter_pdfview: ^1.2.7
   path_provider:
-  permission_handler: ^10.2.0
 
 dev_dependencies:
   flutter_test:
