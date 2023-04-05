@@ -27,12 +27,10 @@ class _MainPageState extends State<MainPage> {
   @override
   void initState() {
     super.initState();
-    // _permissionHandler();
+
     fromAsset('lib/assets/files/worksheet.pdf', 'worksheet.pdf').then((f) {
       setState(() {
-        // print('======== ${f.path}');
         pathPDF = f.path;
-        // pathPDF = 'lib/assets/files/worksheet.pdf';
       });
     });
   }
