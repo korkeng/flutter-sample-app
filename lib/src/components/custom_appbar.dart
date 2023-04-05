@@ -17,11 +17,7 @@ class CustomAppBar extends AppBar {
           centerTitle: centerTitle ?? true,
           leading: Padding(
             padding: const EdgeInsets.only(left: 24),
-            child: IconButton(
-              iconSize: 36,
-              icon: const Icon(Icons.account_circle_outlined),
-              onPressed: () {},
-            ),
+            child: Icon(Icons.account_circle_outlined, size: 36),
           ),
           actions: [
             Padding(
