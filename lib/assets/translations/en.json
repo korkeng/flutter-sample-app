@@ -17,5 +17,8 @@
   },
   "post_test_page": {
     "title": "Post-Test"
+  },
+  "laboratory_result_page": {
+    "title": "Lab Result"
   }
 }

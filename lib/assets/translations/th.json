@@ -1,21 +1,24 @@
 {
-    "main_page": {
-        "title": "วงจรเครื่องปรับอากาศ",
-        "pre_test_tile": "แบบทดสอบก่อนเรียน",
-        "work_sheet_tile": "ใบความรู้",
-        "laboratory_tile": "การทดลอง",
-        "post_test_tile": "แบบทดสอบหลังเรียน",
-        "satisfaction_survey_tile": "แบบประเมินความพึงพอใจ"
-    },
-    "setting_page" : {
-        "title": "ตั้งค่า",
-        "change_language_tile": "เปลี่ยนภาษา",
-        "logout_tile": "ออกจากระบบ"
-    },
-    "pre_test_page" : {
-        "title": "แบบทดสอบก่อนเรียน"
-    },
-    "post_test_page" : {
-        "title": "แบบทดสอบหลังเรียน"
-    }
+  "main_page": {
+    "title": "วงจรเครื่องปรับอากาศ",
+    "pre_test_tile": "แบบทดสอบก่อนเรียน",
+    "work_sheet_tile": "ใบความรู้",
+    "laboratory_tile": "การทดลอง",
+    "post_test_tile": "แบบทดสอบหลังเรียน",
+    "satisfaction_survey_tile": "แบบประเมินความพึงพอใจ"
+  },
+  "setting_page": {
+    "title": "ตั้งค่า",
+    "change_language_tile": "เปลี่ยนภาษา",
+    "logout_tile": "ออกจากระบบ"
+  },
+  "pre_test_page": {
+    "title": "แบบทดสอบก่อนเรียน"
+  },
+  "post_test_page": {
+    "title": "แบบทดสอบหลังเรียน"
+  },
+  "laboratory_result_page": {
+    "title": "คะแนนการทดลอง"
+  }
 }
